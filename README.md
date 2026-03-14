@@ -1,4 +1,4 @@
-# CFSpiders Workers Skeleton
+# WorkersSpiders
 
 这个仓库是一个“可扩展爬虫封装”骨架，目标是替代 Scrapy 的部分工程结构，并运行在 Cloudflare Workers。
 
@@ -29,9 +29,9 @@ npm install
 ```
 2. 创建 D1/KV/Queue（首次）
 ```bash
-wrangler d1 create cfspiders_db
+wrangler d1 create workersspiders_db
 wrangler kv namespace create CACHE
-wrangler queues create cfspiders-crawl
+wrangler queues create workersspiders-crawl
 ```
 3. 更新 `wrangler.toml` 里的 `database_id` 和 `kv id`
 4. 执行迁移
@@ -59,8 +59,12 @@ npm run dev
 ```bash
 git init
 git add .
-git commit -m "init workers spider skeleton"
+git commit -m "init WorkersSpiders workers skeleton"
 git branch -M main
 git remote add origin <your-repo-url>
 git push -u origin main
 ```
+
+
+
+

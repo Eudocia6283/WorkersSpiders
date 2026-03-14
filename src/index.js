@@ -77,7 +77,7 @@ export default {
 
     return json(
       {
-        name: "cfspiders-workers",
+        name: "workersspiders-workers",
         endpoints: ["POST /api/crawl", "GET /api/item", "GET /healthz"]
       },
       { status: 200 }
@@ -96,4 +96,6 @@ export default {
     }
   }
 };
+
+
 

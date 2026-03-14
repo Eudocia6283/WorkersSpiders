@@ -1,6 +1,6 @@
 export async function fetchHtml(url, spider) {
   const headers = {
-    "user-agent": spider.userAgent || "cfspiders-workers/0.1",
+    "user-agent": spider.userAgent || "workersspiders-workers/0.1",
     accept: "text/html,application/xhtml+xml",
     ...spider.headers
   };
@@ -11,3 +11,5 @@ export async function fetchHtml(url, spider) {
   }
   return response.text();
 }
+
+
