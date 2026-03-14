@@ -1,0 +1,24 @@
+name = "cfspiders-workers"
+main = "src/index.js"
+compatibility_date = "2026-03-14"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cfspiders_db"
+database_id = "TODO-REPLACE-WITH-D1-ID"
+migrations_dir = "migrations"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "TODO-REPLACE-WITH-KV-ID"
+
+[[queues.producers]]
+binding = "CRAWL_QUEUE"
+queue = "cfspiders-crawl"
+
+[[queues.consumers]]
+queue = "cfspiders-crawl"
+max_batch_size = 10
+max_batch_timeout = 5
+max_retries = 2
+
